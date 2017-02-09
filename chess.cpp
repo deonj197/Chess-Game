@@ -1,7 +1,6 @@
 #include<iostream>   
 using std::cout; using std::cin; using std::endl; 
-#include<string>
-using std::string;
+
 bool valid_move_pawn(){
 	return true;
 }
@@ -28,10 +27,12 @@ bool valid_move_king(){
 	return true;	
 }
 
-void display_board(char array[]){
+void display_board(char array[8][8]){
+    char piece;
 	for(int row = 0; row < 8; ++row){
 		for(int column = 0; column < 8; ++column){
-			cout << array[row][column] << ' '; 
+		    piece = array[row][column];
+			cout << piece << ' '; 
 		}
 		cout << endl;
 	}
@@ -53,16 +54,16 @@ int main(){
 	const char* b_pawn = u8"\u265F";
 	
 	// create an intial game board using an array of arrays [row][column]
-	char grid[8][8] = {
+    char grid[8][8] = {
 			  {*b_rook,*b_knight,*b_bishop,*b_queen,*b_king,*b_bishop,*b_knight,*b_rook},
-		          {*b_pawn,*b_pawn,*b_pawn,*b_pawn,*b_pawn,*b_pawn,*b_pawn,*b_pawn},
+		      {*b_pawn,*b_pawn,*b_pawn,*b_pawn,*b_pawn,*b_pawn,*b_pawn,*b_pawn},
 			  {'\0','\0','\0','\0','\0','\0','\0','\0'},
 			  {'\0','\0','\0','\0','\0','\0','\0','\0'},
 			  {'\0','\0','\0','\0','\0','\0','\0','\0'},
 			  {'\0','\0','\0','\0','\0','\0','\0','\0'},
 			  {*w_pawn,*w_pawn,*w_pawn,*w_pawn,*w_pawn,*w_pawn,*w_pawn,*w_pawn},
-			  {*w_rook,*w_knight,*w_bishop,*b_queen,*b_king,*w_bishop,*w_knight,*w_rook}
-		          };
+			  {*w_rook,*w_knight,*w_bishop,*w_queen,*w_king,*w_bishop,*w_knight,*w_rook}
+		      };
 	//int space_mum[8][8] = {
 		                   //{1,2,3,4,5,6,7,8}
 						   //{9,10,11,12,13,14,15,16}
