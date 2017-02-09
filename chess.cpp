@@ -1,5 +1,5 @@
-#include<iostream>   
-using std::cout; using std::cin; using std::endl; 
+#include<iostream>
+using std::cout; using std::cin; using std::endl;
 
 // the below functions are used to verify that a given move is valid based on piece type and location
 bool valid_move_pawn(){
@@ -11,21 +11,32 @@ bool valid_move_rook(){
 }
 
 bool valid_move_night(){
-	return true;	
+	return true;
 }
 
 bool valid_move_bishop(){
-	return true;	
+	return true;
 }
 
 
 bool valid_move_queen(){
-	return true;	
-}	
+	return true;
+}
 
 
 bool valid_move_king(){
-	return true;	
+	return true;
+}
+
+/**
+* This function will handle all of the piece movements
+*	throughout the array. The return type is void since
+* we will verify the movements via other functions.
+*
+* @param x, y - Handle the row and column of the movement.
+**/
+void move_piece(int x, int y) {
+
 }
 
 // function to display the current game board at any given time
@@ -34,7 +45,7 @@ void display_board(char array[8][8]){
 	for(int row = 0; row < 8; ++row){
 		for(int column = 0; column < 8; ++column){
 		    piece = array[row][column];
-			cout << piece << ' '; 
+			cout << piece << ' ';
 		}
 		cout << endl;
 	}
@@ -54,7 +65,7 @@ int main(){
 	const char* b_bishop = u8"\u265D";
 	const char* b_knight = u8"\u265E";
 	const char* b_pawn = u8"\u265F";
-	
+
 	// create an intial game board using an array of arrays [row][column]
     	char grid[8][8] = {
 		{*b_rook,*b_knight,*b_bishop,*b_queen,*b_king,*b_bishop,*b_knight,*b_rook},
@@ -77,7 +88,7 @@ int main(){
 		{49,50,51,52,53,54,55,56},
 		{57,58,59,60,61,62,63,64}
 		};
-			
-	display_board(grid);					   
+
+	display_board(grid);
 	return 0;
 }
