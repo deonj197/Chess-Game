@@ -54,25 +54,28 @@ int main(){
 	const char* b_pawn = u8"\u265F";
 	
 	// create an intial game board using an array of arrays [row][column]
-    char grid[8][8] = {
-			  {*b_rook,*b_knight,*b_bishop,*b_queen,*b_king,*b_bishop,*b_knight,*b_rook},
-		      {*b_pawn,*b_pawn,*b_pawn,*b_pawn,*b_pawn,*b_pawn,*b_pawn,*b_pawn},
-			  {'\0','\0','\0','\0','\0','\0','\0','\0'},
-			  {'\0','\0','\0','\0','\0','\0','\0','\0'},
-			  {'\0','\0','\0','\0','\0','\0','\0','\0'},
-			  {'\0','\0','\0','\0','\0','\0','\0','\0'},
-			  {*w_pawn,*w_pawn,*w_pawn,*w_pawn,*w_pawn,*w_pawn,*w_pawn,*w_pawn},
-			  {*w_rook,*w_knight,*w_bishop,*w_queen,*w_king,*w_bishop,*w_knight,*w_rook}
-		      };
-	//int space_mum[8][8] = {
-		                   //{1,2,3,4,5,6,7,8}
-						   //{9,10,11,12,13,14,15,16}
-						   //{17,18,19,20,21,22,23,24}
-						   //{}
-						   //{}
-						   //{}
-						   //{}
-						   //{}
+    	char grid[8][8] = {
+		{*b_rook,*b_knight,*b_bishop,*b_queen,*b_king,*b_bishop,*b_knight,*b_rook},
+		{*b_pawn,*b_pawn,*b_pawn,*b_pawn,*b_pawn,*b_pawn,*b_pawn,*b_pawn},
+		{'\0','\0','\0','\0','\0','\0','\0','\0'},
+		{'\0','\0','\0','\0','\0','\0','\0','\0'},
+		{'\0','\0','\0','\0','\0','\0','\0','\0'},
+		{'\0','\0','\0','\0','\0','\0','\0','\0'},
+		{*w_pawn,*w_pawn,*w_pawn,*w_pawn,*w_pawn,*w_pawn,*w_pawn,*w_pawn},
+		{*w_rook,*w_knight,*w_bishop,*w_queen,*w_king,*w_bishop,*w_knight,*w_rook}
+		};
+	// keep track of each individual space on the board
+	int space_mum[8][8] = {
+		{1,2,3,4,5,6,7,8},
+		{9,10,11,12,13,14,15,16},
+		{17,18,19,20,21,22,23,24},
+		{25,26,27,28,29,30,31,32},
+		{33,34,35,36,37,38,39,40},
+		{41,42,43,44,45,46,47,48},
+		{49,50,51,52,53,54,55,56},
+		{57,58,59,60,61,62,63,64}
+		};
+			
 	display_board(grid);					   
 	return 0;
 }
