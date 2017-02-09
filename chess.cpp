@@ -28,7 +28,7 @@ bool valid_move_king(){
 	return true;	
 }
 
-void display_board(char array){
+void display_board(char array[]){
 	for(int row = 0; row < 8; ++row){
 		for(int column = 0; column < 8; ++column){
 			cout << array[row][column] << ' '; 
@@ -54,15 +54,15 @@ int main(){
 	
 	// create an intial game board using an array of arrays [row][column]
 	char grid[8][8] = {
-					   {*b_rook,*b_knight,*b_bishop,*b_queen,*b_king,*b_bishop,*b_knight,*b_rook}
-					   {*b_pawn,*b_pawn,*b_pawn,*b_pawn,*b_pawn,*b_pawn,*b_pawn,*b_pawn}
-					   {'\0','\0','\0','\0','\0','\0','\0','\0'}
-					   {'\0','\0','\0','\0','\0','\0','\0','\0'}
-					   {'\0','\0','\0','\0','\0','\0','\0','\0'}
-					   {'\0','\0','\0','\0','\0','\0','\0','\0'}
-					   {*w_pawn,*w_pawn,*w_pawn,*w_pawn,*w_pawn,*w_pawn,*w_pawn,*w_pawn}
-					   {*w_rook,*w_knight,*w_bishop,*b_queen,*b_king,*w_bishop,*w_knight,*w_rook}
-					   };
+			  {*b_rook,*b_knight,*b_bishop,*b_queen,*b_king,*b_bishop,*b_knight,*b_rook},
+		          {*b_pawn,*b_pawn,*b_pawn,*b_pawn,*b_pawn,*b_pawn,*b_pawn,*b_pawn},
+			  {'\0','\0','\0','\0','\0','\0','\0','\0'},
+			  {'\0','\0','\0','\0','\0','\0','\0','\0'},
+			  {'\0','\0','\0','\0','\0','\0','\0','\0'},
+			  {'\0','\0','\0','\0','\0','\0','\0','\0'},
+			  {*w_pawn,*w_pawn,*w_pawn,*w_pawn,*w_pawn,*w_pawn,*w_pawn,*w_pawn},
+			  {*w_rook,*w_knight,*w_bishop,*b_queen,*b_king,*w_bishop,*w_knight,*w_rook}
+		          };
 	//int space_mum[8][8] = {
 		                   //{1,2,3,4,5,6,7,8}
 						   //{9,10,11,12,13,14,15,16}
