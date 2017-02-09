@@ -15,17 +15,17 @@ bool valid_move_night(){
 }
 
 bool valid_move_bishop(){
-	return true	
+	return true;	
 }
 
 
 bool valid_move_queen(){
-	return true	
+	return true;	
 }	
 
 
 bool valid_move_king(){
-	return true	
+	return true;	
 }
 
 void display_board(char array){
