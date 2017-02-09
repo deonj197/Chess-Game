@@ -1,6 +1,7 @@
 #include<iostream>   
 using std::cout; using std::cin; using std::endl; 
 
+// the below functions are used to verify that a given move is valid based on piece type and location
 bool valid_move_pawn(){
 	return true;
 }
@@ -27,6 +28,7 @@ bool valid_move_king(){
 	return true;	
 }
 
+// function to display the current game board at any given time
 void display_board(char array[8][8]){
     char piece;
 	for(int row = 0; row < 8; ++row){
