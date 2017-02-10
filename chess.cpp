@@ -35,8 +35,8 @@ bool valid_move_king(){
 *
 * @param x, y - Handle the row and column of the movement.
 **/
-void move_piece(int x, int y) {
-
+void move__piece(int x, int y) {
+	 
 }
 
 // function to display the current game board at any given time
