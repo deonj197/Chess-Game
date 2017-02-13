@@ -17,8 +17,8 @@ pawn::pawn(char set_color):color(set_color){
 	first_move = true;
 }
 
-/*  This function determines whether or not a propsed move is valid for a piece of type pawn
- *  	return value is a boolean value (true or false)
+/*  This function determines whether or not a proposed move is valid for a piece of type pawn
+ *  	Return value is a boolean value (true or false)
  */ 	
 bool pawn::valid_move_pawn(long vert, long horiz){
 	if (first_move){ // handle the case of an initial pawn move where pawns can move one or two spaces
@@ -27,7 +27,7 @@ bool pawn::valid_move_pawn(long vert, long horiz){
 			return true;
 		}
 	}
-	else{ // all moves that are not initial pawn moves
+	else{ // handle all moves that are not initial pawn moves
 		if (vert == 1 && horiz == 0){
 			return true;
 		}
