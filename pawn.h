@@ -3,7 +3,7 @@
 
 class pawn {
 	public:
-		pawn_valid();
+		pawn(); //pawn constructor
 	protected:
 	private:
 }
