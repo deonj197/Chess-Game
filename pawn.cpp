@@ -3,6 +3,6 @@
 
 using namespace std;
 
-pawn::pawn{
+pawn::pawn(){
 
 }
