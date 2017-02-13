@@ -1,32 +1,18 @@
+/*
+ * chess.cpp
+ *
+ *  Created on Feb 9, 2017
+ * 	 Author: Deon
+ */
+
 #include<iostream>
 using std::cout; using std::cin; using std::endl;
-
-// the below functions are used to verify that a given move is valid based on piece type and location
-bool valid_move_pawn(){
-	return true;
-}
-
-bool valid_move_rook(){
-	return true;
-}
-
-bool valid_move_night(){
-	return true;
-}
-
-bool valid_move_bishop(){
-	return true;
-}
-
-
-bool valid_move_queen(){
-	return true;
-}
-
-
-bool valid_move_king(){
-	return true;
-}
+#include "pawn.h"
+#include "rook.h"
+#include "knight.h"
+#include "bishop.h"
+#include "queen.h"
+#include "king.h"
 
 /**
 * This function will handle all of the piece movements
@@ -77,6 +63,7 @@ int main(){
 		{*w_pawn,*w_pawn,*w_pawn,*w_pawn,*w_pawn,*w_pawn,*w_pawn,*w_pawn},
 		{*w_rook,*w_knight,*w_bishop,*w_queen,*w_king,*w_bishop,*w_knight,*w_rook}
 		};
+	
 	// keep track of each individual space on the board
 	int space_mum[8][8] = {
 		{1,2,3,4,5,6,7,8},
