@@ -17,6 +17,7 @@ class pawn {
 	protected:
 	private:
 		char color; // holds the pieces color (white or black = w or b)
+		bool first_move;
 		
 };
 
