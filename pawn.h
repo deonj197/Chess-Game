@@ -6,6 +6,6 @@ class pawn {
 		pawn(); //pawn constructor
 	protected:
 	private:
-}
+};
 
 #endif // PAWN_H
